@@ -6,35 +6,80 @@
     <description>Recent content in Tags on Textos, ideias e tutoriais</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2015 14:05:19 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Plot</title>
-      <link>/tags/plot/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>Ggplot2</title>
+      <link>/tags/ggplot2/</link>
+      <pubDate>Tue, 28 Jul 2015 14:05:19 +0000</pubDate>
       
-      <guid>/tags/plot/</guid>
+      <guid>/tags/ggplot2/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>Gráficos</title>
+      <link>/tags/gr%C3%A1ficos/</link>
+      <pubDate>Tue, 28 Jul 2015 14:05:19 +0000</pubDate>
       
-      <guid>/tags/r-markdown/</guid>
+      <guid>/tags/gr%C3%A1ficos/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Regression</title>
-      <link>/tags/regression/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>Portuguese</title>
+      <link>/tags/portuguese/</link>
+      <pubDate>Tue, 28 Jul 2015 14:05:19 +0000</pubDate>
       
-      <guid>/tags/regression/</guid>
+      <guid>/tags/portuguese/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Tue, 28 Jul 2015 14:05:19 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Servidor</title>
+      <link>/tags/servidor/</link>
+      <pubDate>Tue, 28 Jul 2015 14:05:19 +0000</pubDate>
+      
+      <guid>/tags/servidor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ssh</title>
+      <link>/tags/ssh/</link>
+      <pubDate>Tue, 28 Jul 2015 14:05:19 +0000</pubDate>
+      
+      <guid>/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>/tags/tutorial/</link>
+      <pubDate>Tue, 28 Jul 2015 14:05:19 +0000</pubDate>
+      
+      <guid>/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visualização</title>
+      <link>/tags/visualiza%C3%A7%C3%A3o/</link>
+      <pubDate>Tue, 28 Jul 2015 14:05:19 +0000</pubDate>
+      
+      <guid>/tags/visualiza%C3%A7%C3%A3o/</guid>
       <description></description>
     </item>
     

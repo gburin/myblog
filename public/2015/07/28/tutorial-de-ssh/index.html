@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <title>Tutorial de SSH </title>
+
+
+
+<meta name="description" content="Um blog para registrar ideias, reflexões e tutoriais.">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" id="ct-tracks-google-fonts-css" href="//fonts.googleapis.com/css?family=Raleway%3A400%2C700&amp;subset=latin%2Clatin-ext&amp;ver=4.7.2" type="text/css" media="all">
+<link rel="stylesheet" href="/css/font-awesome.min.css" type='text/css' media='all'>
+
+<link href="/css/style.css" rel="stylesheet" id="theme-stylesheet" type='text/css' media='all'>
+
+<link href="/css/custom.css" rel="stylesheet" type='text/css' media='all'>
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+
+</head>
+
+
+<body class="post-template-default single single-post single-format-standard ct-body singular singular-post not-front standard">
+  
+  <div id="overflow-container" class="overflow-container">
+    <a class="skip-content" href="#main">Skip to content</a>
+    <header id="site-header" class="site-header" role="banner">
+      <div class='top-navigation'>
+        <div class='container'>
+
+  <div id="menu-secondary" class="menu-container menu-secondary" role="navigation">
+    <button id="toggle-secondary-navigation" class="toggle-secondary-navigation"><i class="fa fa-plus"></i></button>
+
+    <div class="menu">
+
+      <ul id="menu-secondary-items" class="menu-secondary-items">
+        
+        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+          <a href="/categories/tutorial">tutorial</a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <ul class="social-media-icons">
+
+
+    
+    <li>
+      <a href="full%20profile%20url%20in%20facebook" data-animate-hover="pulse" class="facebook" target="_blank">
+        <i class="fa fa-facebook-square" title="facebook"></i>
+        <span class="screen-reader-text">facebook</span>
+      </a>
+    </li>
+    
+
+    
+
+    
+    <li>
+      <a href="https://www.twitter.com/gustavoburin" data-animate-hover="pulse" class="twitter" target="_blank">
+        <i class="fa fa-twitter-square" title="twitter"></i>
+        <span class="screen-reader-text">twitter</span>
+      </a>
+    </li>
+    
+
+    
+    <li>
+      <a href="https://www.instagram.com/gburin_ari" data-animate-hover="pulse" class="twitter" target="_blank">
+        <i class="fa fa-instagram" title="instagram"></i>
+        <span class="screen-reader-text">instagram</span>
+      </a>
+    </li>
+    
+
+    
+    <li>
+      <a href="mailto:arietebio@gmail.com" data-animate-hover="pulse" class="email">
+        <i class="fa fa-envelope" title="email"></i>
+        <span class="screen-reader-text">email</span>
+      </a>
+    </li>
+    
+
+    
+
+    
+
+
+    
+    <li>
+      <a href="https://www.github.com/gburin" data-animate-hover="pulse" class="github" target="_blank">
+        <i class="fa fa-github" title="github"></i>
+        <span class="screen-reader-text">github</span>
+      </a>
+    </li>
+    
+
+  </ul></div>
+
+      </div>
+
+      <div class="container">
+        <div id="title-info" class="title-info">
+  <div id='site-title' class='site-title'>
+    
+    <a href="/"> Textos, ideias e tutoriais </a>
+    </div>
+  </div>
+  <button id="toggle-navigation" class="toggle-navigation">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
+  <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+    
+
+    <div class="menu">
+      <ul id="menu-primary-items" class="menu-primary-items">
+        <li id="menu-item" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item">
+          <a href="/">Home</a>
+        </li>
+
+        
+        
+        <li id="menu-item" class="menu-item menu-item-type-post_type menu-item-object-page menu-item">
+          <a href="/">Início</a>
+        </li>
+        
+        
+        
+        <li id="menu-item" class="menu-item menu-item-type-post_type menu-item-object-page menu-item">
+          <a href="/about/">Sobre</a>
+        </li>
+        
+        
+        
+        <li id="menu-item" class="menu-item menu-item-type-post_type menu-item-object-page menu-item">
+          <a href="/contact/">Contato</a>
+        </li>
+        
+        
+      </ul>
+
+
+
+    </div>
+
+  </div>
+
+      </div>
+    </header>
+
+    <div id="main" class="main" role="main">
+
+      
+  <div id="loop-container" class="loop-container">
+    
+    <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
+
+      <div class='featured-image lazy lazy-bg-image' data-background="/img/covers/tutorial_ssh.jpg">
+      </div>
+      
+        <div class="entry-meta">
+          <span class="date">July 28</span>	<span> / </span>
+
+          <span class="author">
+            
+            
+            
+          </span>
+
+
+          
+          <span class="category">
+            <span> / </span>
+
+            <a href="/categories/tutorial">tutorial</a>
+          </span>
+          
+
+
+        </div>
+        <div class='entry-header'>
+          <h1 class='entry-title'> Tutorial de SSH</h1>
+        </div>
+        <div class="entry-container">
+          <div class="entry-content">
+            <article>
+              
+
+<p>SSH é a sigla para &lsquo;Secure SHell&rsquo;, e é basicamente um protocolo de rede que permite computadores se conectarem via rede de forma a permitir que um computador execute comandos em unidades remotas de maneira segura (criptografada). Essa segurança é garantida por uma chave de segurança que é armazenada tanto em no computador local quanto na máquina remota. Além disso, na maioria das vezes esse acesso é somente autorizado através de senhas de acesso.</p>
+
+<h2 id="acesso">Acesso</h2>
+
+<p>O acesso básico a uma máquina remota via SSH é bastante simples:</p>
+
+<pre><code class="language-r">$ ssh usuario@ip
+</code></pre>
+
+<p>No entanto, alguns argumentos podem ser usados conjuntamente com esse comando básico quando a tarefa requer especificações extras. Uma lista destes argumentos e suas funções pode ser facilmente obtida usando o comando</p>
+
+<pre><code class="language-r">$ man ssh
+</code></pre>
+
+<p>que abre o manual deste programa. (Esta sintaxe pode ser usada para qualquer programa na linha de comando. <em>Ex. man cp, man emacs, etc.</em>)</p>
+
+<p>No primeiro acesso, uma mensagem de aviso aparecerá perguntando se você tem certeza se quer continuar.</p>
+
+<pre><code class="language-r"># The authenticity of host 'github.com (207.97.227.239)' can't be established.
+# RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+# Are you sure you want to continue connecting (yes/no)?
+</code></pre>
+
+<p>Isso acontece pois o protocolo SSH é baseado no reconhecimento entre as chaves públicas do computador local e do computador remoto. No primeiro acesso tanto a chave local quanto a chave remota serão armazenadas nos dois locais, evitando que a identidade das máquinas precise ser verificada pelo usuário em todo acesso. Por fim, basta digitar <em>yes</em> que sua senha será pedida. (<em>Nota: ao digitar sua senha, a maioria dos sistemas operacionais não mostrará nenhum caracter representando sua senha, ou seja, você digitará a senha e nada vai aparecer na tela. Não se preocupe, isso é mais uma medida de segurança.</em>)</p>
+
+<h1 id="rotinas-comuns">Rotinas Comuns</h1>
+
+<h2 id="armazenando-os-endereços-de-ip-das-máquinas">Armazenando os endereços de IP das máquinas</h2>
+
+<p>Lembrar dos endereços numéricos de IP das máquinas é algo que não precisa ser feito. Em sistemas UNIX, é possível atribuir nomes a esses endereços ao editar o arquivo /etc/hosts utilizando seu editor de preferência (nano, vi, emacs, gedit, etc.)</p>
+
+<pre><code class="language-r">$ emacs /etc/hosts
+
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost
+fe80::1%lo0     localhost
+</code></pre>
+
+<p>Ao editar esse arquivo, basta inserir na primeira coluna o endereço de IP da máquina desejada e na segunda coluna o nome que você quer atribuir à ela.</p>
+
+<pre><code class="language-r">##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost
+fe80::1%lo0     localhost
+143.107.xxx.xxx labmeme1
+143.107.yyy.yyy jabba
+</code></pre>
+
+<p>Após atribuir um <em>alias</em> (nome que damos a qualquer &ldquo;codinome&rdquo; de um objeto ou função em UNIX) aos servidores, podemos nos conectar a eles tanto através do endereço de IP quanto através de seu <em>alias</em>.</p>
+
+<pre><code class="language-r">$ ssh usuario@labmeme1
+$ ssh usuario@jabba
+</code></pre>
+
+<p>Neste exemplo, o mesmo nome do servidor foi atribuído ao seu , porém isso pode ser modificado de acordo com sua vontade/necessidade.</p>
+
+<pre><code class="language-r">##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost
+fe80::1%lo0     localhost
+143.107.xxx.xxx servidor-mac
+143.107.yyy.yyy servidor-linux
+</code></pre>
+
+<p>Aqui o acesso seria feito da seguinte maneira:</p>
+
+<pre><code class="language-r">$ ssh usuario@servidor-mac
+$ ssh usuario@servidor-linux
+</code></pre>
+
+<h2 id="acessando-nós-escravos">Acessando nós escravos</h2>
+
+<p>Da mesma forma como você pode fazer no seu computador, o nó escravo do nosso servidor Linux (<em>leia</em>) pode ser acessado via ssh através do nó <em>jabba</em></p>
+
+<pre><code class="language-r">$ *dentro do nó jabba* ssh usuario@leia
+</code></pre>
+
+<h2 id="tunneling-por-ssh"><em>Tunneling</em> por ssh</h2>
+
+<p>Em alguns casos, como no serviço de computação em nuvem da USP, para maior segurança o acesso aos servidores não é feito de forma direta. Nesse caso, o acesso é inicialmente feito a uma máquina (virtual nesse caso, podendo ser física) que media a &ldquo;conversa&rdquo; entre a máquina local e os servidores de processamento. Sendo assim, o acesso aos servidores de processamento deve ser feito em duas etapas: 1. Acesso via ssh: <strong>ssh usuario@shark.lcca.usp.br</strong>; 2. Acesso via ssh a partir dessa máquina aos servidores <em>aguia</em> e <em>jaguar</em>: <strong>ssh usuario@aguia</strong> ou <strong>ssh usuario@jaguar</strong>.</p>
+
+<p>Sendo assim, a cópia de arquivos de/para o servidor (capítulo 2) precisaria também ser feita seguindo essas duas etapas. Porém, as máquinas intermediárias costumam ter limitação de recursos (principalmente de armazenamento), além de ser um processo bastante inconveniente copiar arquivos para um determinado lugar para em seguida copiá-los novamente para uma nova localidade. Para evitar esse tipo de problemas, é possível estabelecer uma conexão de <em>tunneling</em> por ssh, que cria literalmente um túnel de acesso direto entre a máquina local e os servidores de processamento. Essa conexão é criada da seguinte forma (usando uma conexão com o servidor <em>aguia</em> como exemplo:</p>
+
+<pre><code class="language-r">$ ssh -2 -L 8020:aguia.lcca.usp.br:22 usuario@shark.lcca.usp.br
+</code></pre>
+
+<p>onde <strong>-L</strong> indica que o link entre sua máquina e o servidor deve ser feito através da porta 8020 (a porta 22 é a porta padrão de comunicação via ssh). Essa conexão deve ser mantida aberta para que os arquivos possam ser copiados diretamente da máquina local para os servidores de processamento e vice-versa.</p>
+
+<h2 id="encerrando-uma-conexão">Encerrando uma conexão</h2>
+
+<p>Para encerrar uma conexão ssh, basta digitar <strong>exit</strong> ou apertar as teclas <strong>Ctrl+d</strong></p>
+
+<h1 id="copiando-arquivos-via-ssh">Copiando arquivos <em>via</em> ssh</h1>
+
+<p>A rotina de trabalho em servidores remotos envolve muitas etapas de cópia de arquivos tanto do computador local para o remoto quanto no caminho inverso. A cópia de arquivos via ssh se assemelha bastante à cópia de arquivos localmente, porém usa-se o comando <strong>scp</strong> e seus argumentos.</p>
+
+<p>Os argumentos mais comumente usados são:</p>
+
+<table>
+<thead>
+<tr>
+<th>Argumento</th>
+<th>Função</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>-r</td>
+<td><strong>recursive</strong>: necessário para copiar múltiplos arquivos e/ou pastas</td>
+</tr>
+
+<tr>
+<td>-v</td>
+<td><strong>verbose</strong>: imprime mensagens de progresso</td>
+</tr>
+
+<tr>
+<td>-P</td>
+<td><strong>port</strong>: indica a porta pela qual os arquivos devem ser copiados</td>
+</tr>
+
+<tr>
+<td>-q</td>
+<td><strong>quiet</strong>: não imprime mensagens nem avisos</td>
+</tr>
+
+<tr>
+<td>-l</td>
+<td><strong>limit</strong>: limita o uso de banda de conexão (em bytes) para a cópia dos arquivos</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="copiando-um-arquivo">Copiando um arquivo</h2>
+
+<p>Neste exemplo, vamos copiar o arquivo <strong>foo.txt</strong> do computador local para a pasta <em>/home</em> do servidor. (Para os exemplos a seguir, assumiremos que você já domina os comandos básicos de shell).</p>
+
+<pre><code class="language-r">$ scp foo.txt usuario@jabba:~/
+</code></pre>
+
+<h2 id="copiando-vários-arquivos-ou-pasta">Copiando vários arquivos ou pasta</h2>
+
+<p>Agora, vamos copiar a pasta <em>phylogenies</em> localizada na pasta <em>/home/usuario/</em> para a pasta <em>~/Dropbox</em>.</p>
+
+<pre><code class="language-r">$ scp -r usuario@143.107.xxx.xxx:~/usuario/phylogenies ~/Dropbox
+</code></pre>
+
+<p>Lembre-se de tomar cuidado com os caminhos para os arquivos. Verifique se você está na pasta desejada para usar a forma simplificada de caminho, ou certifique-se de passar o caminho completo do(s) arquivo(s)/pasta(s) a ser(em) copiados(as).</p>
+
+<h2 id="copiando-arquivos-usando-o-tunneling">Copiando arquivos usando o <em>tunneling</em></h2>
+
+<p>Como mencionado anteriormente, em servidores como o da nuvem da USP podemos copiar arquivos diretamente para os servidores de processamento sem ter que copiar primeiro os arquivos para o gatekeeper e em seguida copiar de lá para os servidores. Para isso, o primeiro passo é ativar a conexão de <em>tunneling</em> como indicado na seção <strong>2.3</strong>.</p>
+
+<p>Em seguida, utilizando o protocolo scp, podemos copiar um ou mais arquivos ou pastas diretamente para os servidores. IMPORTANTE: lembrar a porta usada no <em>tunneling</em>! Ela será necessária nesta etapa.</p>
+
+<pre><code class="language-r">$ scp -r -P 8020 ~/Dropbox/phylogenies usuario@localhost:~/projects
+</code></pre>
+
+<p>Este comando copiou a pasta de filogenias diretamente para o servidor ao qual nos conectamos usando a porta 8020 que foi determinada na conexão de <em>tunneling</em>. O comando para copiar arquivos do servidor para o computador local é similar:</p>
+
+<pre><code class="language-r">$ scp -r -P 8020 usuario@localhost:~/projects/phylogenies ~/backup/
+</code></pre>
+
+<h2 id="copiando-arquivos-usando-o-rsync">Copiando arquivos usando o <em>rsync</em></h2>
+
+<p>Recentemente descobri outro programa que pode ser usado para copiar arquivos de e para o servidor, chamado <em>rsync</em>. Ele apresenta uma característica que o coloca na frente do scp: ele consegue retomar transferências que falharam ao analisar quais arquivos já foram copiados e continuando dali para frente. A utilização dele é bastante parecida com a do scp, e geralmente uso apenas dois argumentos.</p>
+
+<pre><code class="language-r">$ rsync -r -v ~/Dropbox/exemplos usuario@servidor:~/apostilas
+</code></pre>
+
+<p>onde <strong>-r</strong> indica que a cópia deve ser recursiva, ou seja, que arquivos localizados em subpastas também devem ser copiados, e <strong>-v</strong> indica <em>verbose</em>, ou seja, ele imprime na tela a lista dos arquivos à medida em que são copiados.</p>
+
+            </article>
+          </div>
+          
+      <div class='entry-meta-bottom'>
+        
+
+  <div class="entry-categories"><p><span>Categories</span>
+    
+    <a href="/categories/tutorial" title="View all posts in tutorial">tutorial</a>
+  </p>
+</div>
+
+
+
+<div class="entry-tags"><p><span>Tags</span>
+  
+  <a href="/tags/ggplot2" title="View all posts tagged ggplot2">ggplot2</a>
+  
+  <a href="/tags/gr%C3%A1ficos" title="View all posts tagged gráficos">gráficos</a>
+  
+  <a href="/tags/portuguese" title="View all posts tagged portuguese">portuguese</a>
+  
+  <a href="/tags/r" title="View all posts tagged r">r</a>
+  
+  <a href="/tags/servidor" title="View all posts tagged servidor">servidor</a>
+  
+  <a href="/tags/ssh" title="View all posts tagged ssh">ssh</a>
+  
+  <a href="/tags/tutorial" title="View all posts tagged tutorial">tutorial</a>
+  
+  <a href="/tags/visualiza%C3%A7%C3%A3o" title="View all posts tagged visualização">visualização</a>
+  
+
+</p></div>	</div>
+
+</div>
+</div>
+
+<section id="comments" class="comments">
+  
+
+  
+
+
+
+
+</section>
+</div>
+
+ 
+
+
+
+    </div>
+
+    <footer id="site-footer" class="site-footer" role="contentinfo">
+	<h1>
+    
+    <a href=""> Textos, ideias e tutoriais </a>
+    
+	</h1>
+
+			
+
+		<div id="menu-footer" class="menu-container menu-footer" role="navigation">
+		<div class="menu">
+
+      <ul id="menu-footer-items" class="menu-footer-items">
+        
+        <li id="menu-item" class="menu-item menu-item-type-post_type menu-item-object-page menu-item"><a href="/">Início</a></li>
+        
+        <li id="menu-item" class="menu-item menu-item-type-post_type menu-item-object-page menu-item"><a href="/about/">Sobre</a></li>
+        
+        <li id="menu-item" class="menu-item menu-item-type-post_type menu-item-object-page menu-item"><a href="/contact/">Contato</a></li>
+        
+</ul>
+
+</div>	</div>
+
+<ul class="social-media-icons">
+
+        
+				<li>
+					<a class="facebook" target="_blank"
+					   href="full%20profile%20url%20in%20facebook" >
+						<i class="fa fa-facebook" title="facebook"></i>
+						<span class="screen-reader-text">facebook</span>
+					</a>
+				</li>
+        
+
+        
+
+
+        
+        <li>
+        <a href="https://www.twitter.com/gustavoburin"  class="twitter" target="_blank">
+            <i class="fa fa-twitter-square" title="twitter"></i>
+            <span class="screen-reader-text">twitter</span>
+        </a>
+        </li>
+        
+
+        
+        <li>
+        <a href="https://www.instagram.com/gburin_ari"  class="twitter" target="_blank">
+            <i class="fa fa-instagram" title="instagram"></i>
+            <span class="screen-reader-text">instagram</span>
+        </a>
+        </li>
+        
+
+        
+        <li>
+        <a href="mailto:arietebio@gmail.com"  class="email">
+            <i class="fa fa-envelope" title="email"></i>
+            <span class="screen-reader-text">email</span>
+        </a>
+        </li>
+        
+
+        
+
+        
+
+
+        
+        <li>
+        <a href="https://www.github.com/gburin"  class="github" target="_blank">
+            <i class="fa fa-github" title="github"></i>
+            <span class="screen-reader-text">github</span>
+        </a>
+        </li>
+        
+				</ul>	<div class="design-credit">
+		
+		<p>
+			Nederburg Hugo Theme by <a target="_blank" href="https://appernetic.io">Appernetic</a>.
+		</p>
+		<p>
+			A port of Tracks by Compete Themes.
+		</p>
+		
+	</div>
+</footer>
+
+  </div>
+  <script src="/js/jquery.min.js"></script>
+<script src="/js/jquerymigrate.js"></script>
+<script src="/js/production.min.js"></script>
+
+</body>
+</html>
