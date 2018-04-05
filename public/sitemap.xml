@@ -4,16 +4,16 @@
   
   <url>
     <loc>/about/</loc>
-    <lastmod>2016-05-05T21:48:51-07:00</lastmod>
+    <lastmod>2018-04-05T21:48:51-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/2015/07/28/tutorial-de-ssh/</loc>
+    <loc>/tutorial-de-ssh/</loc>
     <lastmod>2015-07-28T14:05:19+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2015/07/28/tutorial-de-ggplot2/</loc>
+    <loc>/tutorial-de-ggplot2/</loc>
     <lastmod>2015-07-28T14:05:19+00:00</lastmod>
   </url>
   
@@ -72,7 +72,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2016-05-05T21:48:51-07:00</lastmod>
+    <lastmod>2018-04-05T21:48:51-07:00</lastmod>
     <priority>0</priority>
   </url>
   
