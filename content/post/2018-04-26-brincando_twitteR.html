@@ -1,0 +1,386 @@
+---
+title:      "Brincando com dados do Twitter no R"
+date:       2018-04-26 14:05:19
+summary:    Analisando dados do Twitter no R
+categories: ["script"]
+tags:       ["portuguese", "script", "twitteR", "visualização", "R"]
+comments:   true
+showonlyimage: false
+image:      "img/covers/analise_twitter.png"
+---
+
+
+
+<p><strong>Mah ôe!</strong></p>
+<p>No post de hoje, coloquei alguns comandos interessantes que usam o pacote <em>twitteR</em> para analisar twitts <del>AH JURA</del> .</p>
+<div class="figure">
+<img src="https://media1.tenor.com/images/a008ae2b31ae18b6aba48720c3d91c54/tenor.gif?itemid=4276324" />
+
+</div>
+<p>Para poder acessar as informações do twitter através de sua <a href="en.wikipedia.org/wiki/Application_programming_interface">API</a>, é necessário que o(a) usuário(a) crie um aplicativo(pelo nome parece algo complicado, mas é bem simples) para que se possa obter quatro dados para autenticação: <em>Consumer Key</em>, <em>Consumer Secret</em>, <em>Access Token</em> e <em>Access Secret</em>. Para obter todos esses dados, acesse <a href="https://apps.twitter.com">esse site</a>, crie um aplicativo novo e siga os passos da própria página.</p>
+<p>O primeiro passo <del>obviamente</del> é carregar os pacotes necessários.</p>
+<pre class="r"><code>library(&quot;twitteR&quot;)
+library(&quot;wordcloud&quot;)</code></pre>
+<pre><code>## Loading required package: RColorBrewer</code></pre>
+<pre><code>## [1] &quot;Using direct authentication&quot;</code></pre>
+<p>Após registrar seu aplicativo e obter as quatro informações citadas acima, é necessário registrar sua sessão do R para que ela possa ter acesso aos dados:</p>
+<pre class="r"><code>setup_twitter_oauth(&quot;CONSUMER_KEY&quot;, &quot;CONSUMER_SECRET&quot;, &quot;ACCESS_TOKEN&quot;, &quot;ACCESS_SECRET&quot;)</code></pre>
+<p>Pronto, agora é só brincar com os dados de interesse. Como exemplo, vamos dar uma olhada nas minhas mentions:</p>
+<pre class="r"><code>tweets &lt;- searchTwitter(&quot;@gustavoburin&quot;, n = 200)</code></pre>
+<pre><code>## Warning in doRppAPICall(&quot;search/tweets&quot;, n, params = params,
+## retryOnRateLimit = retryOnRateLimit, : 200 tweets were requested but the
+## API can only return 47</code></pre>
+<pre class="r"><code>head(tweets)</code></pre>
+<pre><code>## [[1]]
+## [1] &quot;taisalesw: @gustavoburin @vitornasc Kkkkkk&quot;
+## 
+## [[2]]
+## [1] &quot;LaVachis: RT @gustavoburin: Aquele momento em que você tenta plotar um mapa de distribuições e se torna o Romero Brito https://t.co/3R38fU3oW7&quot;
+## 
+## [[3]]
+## [1] &quot;Pi_gozzo: @gustavoburin @A_la_Baianesca, objetivo da sua vida profissional: Fazer um gráfico assim.&quot;
+## 
+## [[4]]
+## [1] &quot;Pi_gozzo: @gustavoburin Eu adorei esse cubismo brasileiro.&quot;
+## 
+## [[5]]
+## [1] &quot;vitornasc: RT @gustavoburin: Aquele momento em que você tenta plotar um mapa de distribuições e se torna o Romero Brito https://t.co/3R38fU3oW7&quot;
+## 
+## [[6]]
+## [1] &quot;leseixas_: @gustavoburin @diogro Eu recomendo usar as paletas de cores do https://t.co/97nn7MGzwI. Os gráficos ficam mais prof… https://t.co/gWVu0T78Dg&quot;</code></pre>
+<p>Ainda não descobri o porquê, mas a API do twitter está limitando as minhas buscas em valores bastante aleatórios. Um dos motivos pode ser que meu aplicativo é novo, mas isso só vou descobrir daqui a um tempo. Atualizo aqui assim que souber!</p>
+<p>Além disso, também é possível fazer olhar para os dados do perfil de algum usuário:</p>
+<pre class="r"><code>myuser &lt;- getUser(&quot;gustavoburin&quot;)</code></pre>
+<p>Essa função além de obter dados básicos como último status, id, etc., também inclui no objeto diferentes <em>methods</em> que permitem extrair informações mais específicas (notem que por serem funções, esses dados são obtidos usando ‘()’ no fim):</p>
+<pre class="r"><code>myuser$getDescription()</code></pre>
+<pre><code>## [1] &quot;Evolutionary ecologist wannabe, Open-source/science enthusiast, addicted to learning and tweaking everything.&quot;</code></pre>
+<pre class="r"><code>myuser$getFollowersCount()</code></pre>
+<pre><code>## [1] 414</code></pre>
+<p>Outro modo de olhar para o twitter é através da linha do tempo de algum usuário em específico (novamente não sei porque o objeto contém menos informação do que peço na função):</p>
+<pre class="r"><code>usertl &lt;- userTimeline(&quot;gustavoburin&quot;, n = 200)</code></pre>
+<p>Uma forma de facilitar a visualização dessas informações é usando nuvens de palavras. Para isso, usaremos o pacote <em>wordcloud</em>. Mas antes de gerar a nuvem, precisamos organizar os dados coletados acima.</p>
+<pre class="r"><code># Create an empty character vector of the same length as the number of
+# tweets
+tweeter &lt;- vector(mode = &quot;character&quot;, length = length(tweets))
+
+# Extract the screen names from each tweet status
+for (i in 1:length(tweets)){
+    tweeter[i] &lt;- tweets[[i]]$getScreenName()
+}
+
+# Compile the frequencies of each screen name
+tweeter.freq &lt;- table(tweeter)
+
+# Black backgrounds are &#39;this year&#39;s colour&#39; in terms of dataviz!
+par(bg = &quot;black&quot;)
+
+# Draw the word cloud
+wordcloud(names(tweeter.freq), tweeter.freq, colors = c(&quot;tomato&quot;, 
+    &quot;wheat&quot;, &quot;lightblue&quot;), scale = c(4, 0.2), random.color = TRUE, rot.per = 0.5, 
+    min.freq = 1, font = 2, family = &quot;serif&quot;)</code></pre>
+<p><img src="/post/2018-04-26-brincando_twitteR_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Como uma última forma (por agora) de visualizar informações de uma conta específica do twitter, podemos mapear as redes de <em>followers</em> e <em>following</em> do perfil em questão:</p>
+<pre class="r"><code>source(&quot;http://biostat.jhsph.edu/~jleek/code/twitterMap.R&quot;)
+
+twitterMap(&quot;gustavoburin&quot;, fileName = &quot;analise_twitter.pdf&quot;, plotType = &quot;both&quot;, userLocation = &quot;Sao Paulo&quot;)</code></pre>
+<div class="figure">
+<img src="../img/analise_twitter.png" width="700" />
+
+</div>
+<p>Para rodar a função acima, precisei fazer umas pequenas modificações no código, pois o reconhecimento dos dados de latitude/longitude estavam dando erro (talvez por eu não incluir a localização nos meus twitts), além de a função principal somente exportar a imagem sem plotá-la. Colocarei no fim do post as funções modificadas que usei.</p>
+<div id="ta-mas-e-dai" class="section level1">
+<h1>Tá, mas e daí?</h1>
+<p>A motivação para eu dar uma olhada nesse pacote é que eu gostaria de em algum momento fazer uma análise quantitativa da twittosfera científica brasileira, para eventualmente traçar correlações com alguns indicadores de produtividade. Se alguém tiver interesse em olhar isso comigo, por favor entre em contato por e-mail ou twitter!</p>
+<div id="referencias-de-onde-tirei-tudo-isso" class="section level3">
+<h3>Referências (de onde tirei tudo isso?)</h3>
+<p><a href="http://geoffjentry.hexdump.org/twitteR.pdf">Manual do pacote <em>twitteR</em></a></p>
+<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/1211_0417278bb8174e26bd0dcd396d639b3b.html">Tutorial simples de como extrair informações do twitter usando o R</a></p>
+<p><a href="https://simplystatistics.org/2011/12/21/an-r-function-to-map-your-twitter-followers/">Tutorial com funções para plotar os mapas.</a></p>
+</div>
+<div id="funcoes-modificadas" class="section level3">
+<h3>Funções modificadas</h3>
+<pre class="r"><code>#########################################################################################
+#   An R function to make a personalized map of people you follow and who follow you on twitter. 
+#   R functions Copyright (C) 2011 Jeff Leek (jtleek@gmail.com), and the Simply Statistics Blog
+#   (http://simplystatistics.tumblr.com, http://twitter.com/simplystats)
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details, see &lt;http://www.gnu.org/licenses/&gt;.
+#
+#
+#   These functions depend on the packages: twitteR, maps, geosphere, and RColorBrewer. It will
+#   attempt to install them if they are not installed when you source this function. Care
+#   should be used when using this function since the twitteR API has rate limiting in place.
+#   If you have a large number of followers, or run the function many times, you may be
+#   rate limited. 
+#
+#
+#   How to use: 
+#       # Source the function
+#       source(&quot;http://biostat.jhsph.edu/~jleek/code/twitterMap.R&quot;)
+#
+#      # Make your twittermap
+#      twitterMap(&quot;simplystats&quot;)
+#
+#      #If your location can&#39;t be found or latitude longitude can&#39;t be calculated
+#      #choose a bigger city near you. The list of cities used by twitterMap
+#      #can be found like so:
+#      data(world.cities)
+#      grep(&quot;Baltimore&quot;,world.cities[,1])
+#
+#      # Then make the map using that big city
+#      twitterMap(&quot;simplystats&quot;,userLocation=&quot;Baltimore&quot;)
+#   
+#      #If you want both your followers and people you follow in a plot you can do:
+#      twitterMap(&quot;simplystats&quot;,plotType=&quot;both&quot;)
+#      
+########################################################################################
+getPckg &lt;- function(pckg) install.packages(pckg, repos = &quot;http://cran.r-project.org&quot;)
+
+pckg = try(require(twitteR))
+if(!pckg) {
+cat(&quot;Installing &#39;twitteR&#39; from CRAN\n&quot;)
+getPckg(&quot;twitteR&quot;)
+require(&quot;twitteR&quot;)
+}
+
+pckg = try(require(maps))
+if(!pckg) {
+cat(&quot;Installing &#39;maps&#39; from CRAN\n&quot;)
+getPckg(&quot;maps&quot;)
+require(&quot;maps&quot;)
+}
+
+pckg = try(require(geosphere))
+if(!pckg) {
+cat(&quot;Installing &#39;geosphere&#39; from CRAN\n&quot;)
+getPckg(&quot;geosphere&quot;)
+require(&quot;geosphere&quot;)
+}
+
+
+pckg = try(require(RColorBrewer))
+if(!pckg) {
+cat(&quot;Installing &#39;RColorBrewer&#39; from CRAN\n&quot;)
+getPckg(&quot;RColorBrewer&quot;)
+require(&quot;RColorBrewer&quot;)
+}
+
+
+twitterMap &lt;- function(userName,userLocation=NULL,fileName=&quot;twitterMap.pdf&quot;,nMax = 1000,plotType=c(&quot;followers&quot;,&quot;both&quot;,&quot;following&quot;)){
+       
+  # Get location data
+  cat(&quot;Getting data from Twitter, this may take a moment.\n&quot;)
+  tmp = getUser(userName)
+  if(is.null(userLocation)){
+    userLocation = location(tmp)
+    userLocation = trim(userLocation)
+    if(nchar(userLocation) &lt; 2){stop(&quot;We can not find your location from Twitter&quot;)}
+  }
+
+  followers=tmp$getFollowers(n=nMax)
+  followersLocation = sapply(followers,function(x){location(x)})
+  following = tmp$getFriends(n=nMax)
+  followingLocation = sapply(following,function(x){location(x)})
+
+
+  # Load the geographic data
+  data(world.cities)
+  data(us.cities)
+  data(canada.cities)
+
+  # Find the latitude and longitude of the user
+  cat(&quot;Getting geographic (latitude/longitude) of Twitter users.\n&quot;)
+  userLL &lt;- findLatLon(userLocation)$latlon
+  if(any(is.na(userLL))){stop(&quot;We can&#39;t find the latitude and longitude of your location from Twitter&quot;)}
+
+
+  # Find the latitude and longitude of each of the followers/following
+  # and calcualte the distance to the user
+  
+  followersLL = matrix(NA,nrow=length(followers),ncol=4)
+  followingLL = matrix(NA,nrow=length(following),ncol=4)
+
+  for(i in 1:length(followers)){
+    if(length(followersLocation[[i]]) &gt; 0){
+      tmpLL = findLatLon(trim(followersLocation[[i]]))
+      if(any(!is.na(tmpLL$latlon))){
+        followersLL[i,] = c(unlist(tmpLL$latlon),distCosine(userLL,tmpLL$latlon),unlist(tmpLL$cont))
+      }
+    }
+  }
+
+   for(i in 1:length(following)){
+    if(length(followingLocation[[i]]) &gt; 0){
+      tmpLL = findLatLon(trim(followingLocation[[i]]))
+      if(any(!is.na(tmpLL$latlon))){
+        followingLL[i,] =  c(unlist(tmpLL$latlon),distCosine(userLL,tmpLL$latlon),unlist(tmpLL$cont))
+      }
+    }
+  }
+
+  followingLL = followingLL[order(-followingLL[,3]),]
+  followersLL = followersLL[order(-followersLL[,3]),]
+
+  followingLL = followingLL[!is.na(followingLL[,1]),]
+  followersLL = followersLL[!is.na(followersLL[,1]),]
+  
+
+  cat(&quot;Plotting results.\n&quot;)
+  # Set up the colors
+  cols = brewer.pal(7,&quot;Set2&quot;)
+
+  # Both followers and following
+  if(plotType==&quot;both&quot;){
+    #pdf(fileName,height=12,width=10)
+    data(worldMapEnv)
+    par(mfrow=c(2,1),mar=rep(0,4))
+    map(&#39;world&#39;,col=&quot;#191919&quot;,bg=&quot;black&quot;,fill=T,mar=rep(0,4),border=0)
+
+    mtext(paste(&quot;@&quot;,userName,&quot; Follower Map&quot;,sep=&quot;&quot;),col=&quot;lightgrey&quot;)
+    nFollowers = dim(followersLL)[1]
+    for(i in 1:nFollowers){
+      greatC = getGreatCircle(userLL,followersLL[i,1:2])
+      lines(greatC,col=cols[followersLL[i,4]],lwd=0.8)
+    }
+    
+    legend(-180,0,legend = c(paste(&quot;Asia&quot;,sum(followersLL[,4]==1)),paste(&quot;Africa&quot;,sum(followersLL[,4]==2)),paste(&quot;N. America&quot;,sum(followersLL[,4]==3)),paste(&quot;S. America&quot;,sum(followersLL[,4]==4)),paste(&quot;Australia/N.Z.&quot;,sum(followersLL[,4]==5)),paste(&quot;Europe&quot;,sum(followersLL[,4]==6))),text.col=cols[1:6],bg=&quot;black&quot;,cex=0.75)
+    
+ 
+    map(&#39;world&#39;,col=&quot;#191919&quot;,bg=&quot;black&quot;,fill=T,mar=rep(0,4),border=0)
+    mtext(paste(&quot;@&quot;,userName,&quot; Following Map&quot;,sep=&quot;&quot;),col=&quot;lightgrey&quot;)
+    nFollowing = dim(followingLL)[1]
+    for(i in 1:nFollowing){
+      greatC = getGreatCircle(userLL,followingLL[i,1:2])
+      lines(greatC,col=cols[followingLL[i,4]],lwd=0.8)
+    }
+    
+    legend(-180,0,legend = c(paste(&quot;Asia&quot;,sum(followingLL[,4]==1)),paste(&quot;Africa&quot;,sum(followingLL[,4]==2)),paste(&quot;N. America&quot;,sum(followingLL[,4]==3)),paste(&quot;S. America&quot;,sum(followingLL[,4]==4)),paste(&quot;Australia/N.Z.&quot;,sum(followingLL[,4]==5)),paste(&quot;Europe&quot;,sum(followingLL[,4]==6))),text.col=cols[1:6],bg=&quot;black&quot;,cex=0.75)
+
+    #mtext(&quot;Created by @simplystats twitterMap&quot;,side=1,adj=1,cex=0.8,col=&quot;grey&quot;)
+    #dev.off()
+  }
+
+  ## Just followers
+  if(plotType==&quot;followers&quot;){
+    pdf(fileName,height=6,width=10)
+    data(worldMapEnv)
+    map(&#39;world&#39;,col=&quot;#191919&quot;,bg=&quot;black&quot;,fill=T,mar=rep(0,4),border=0)
+
+    mtext(paste(&quot;@&quot;,userName,&quot; Follower Map&quot;,sep=&quot;&quot;),col=&quot;lightgrey&quot;)
+    nFollowers = dim(followersLL)[1]
+    for(i in 1:nFollowers){
+      greatC = getGreatCircle(userLL,followersLL[i,1:2])
+      lines(greatC,col=cols[followersLL[i,4]],lwd=0.8)
+    }
+    
+    legend(-180,0,legend = c(paste(&quot;Asia&quot;,sum(followersLL[,4]==1)),paste(&quot;Africa&quot;,sum(followersLL[,4]==2)),paste(&quot;N. America&quot;,sum(followersLL[,4]==3)),paste(&quot;S. America&quot;,sum(followersLL[,4]==4)),paste(&quot;Australia/N.Z.&quot;,sum(followersLL[,4]==5)),paste(&quot;Europe&quot;,sum(followersLL[,4]==6))),text.col=cols[1:6],bg=&quot;black&quot;,cex=0.75)
+    #mtext(&quot;Created by @simplystats twitterMap&quot;,side=1,adj=1,cex=0.8,col=&quot;grey&quot;)
+    #dev.off()
+ 
+  }
+
+  ## Just following
+  if(plotType==&quot;following&quot;){
+    #pdf(fileName,height=6,width=10)
+    data(worldMapEnv)
+    map(&#39;world&#39;,col=&quot;#191919&quot;,bg=&quot;black&quot;,fill=T,mar=rep(0,4),border=0)
+    mtext(paste(&quot;@&quot;,userName,&quot; Following Map&quot;,sep=&quot;&quot;),col=&quot;lightgrey&quot;)
+    nFollowing = dim(followingLL)[1]
+    for(i in 1:nFollowing){
+      greatC = getGreatCircle(userLL,followingLL[i,1:2])
+      lines(greatC,col=cols[followingLL[i,4]],lwd=0.8)
+    }
+    
+    legend(-180,0,legend = c(paste(&quot;Asia&quot;,sum(followingLL[,4]==1)),paste(&quot;Africa&quot;,sum(followingLL[,4]==2)),paste(&quot;N. America&quot;,sum(followingLL[,4]==3)),paste(&quot;S. America&quot;,sum(followingLL[,4]==4)),paste(&quot;Australia/N.Z.&quot;,sum(followingLL[,4]==5)),paste(&quot;Europe&quot;,sum(followingLL[,4]==6))),text.col=cols[1:6],bg=&quot;black&quot;,cex=0.75)
+
+    #mtext(&quot;Created by @simplystats twitterMap&quot;,side=1,adj=1,cex=0.8,col=&quot;grey&quot;)
+    #dev.off()
+    
+  }
+  
+}
+
+
+findLatLon &lt;- function(loc){
+  latlon = NA
+  cont = NA
+
+  # Asia = 1, Africa = 2, North America = 3, South America = 4, Australia/New Zealand = 5, Europe = 6
+  continents = matrix(NA,nrow=length(unique(world.cities[,2])),ncol=2)
+  continents[,1] = unique(world.cities[,2])
+  continents[1:10,2] = c(1,1,1,2,1,1,1,1,1,1)
+  continents[11:20,2]= c(1,1,2,1,1,2,1,2,2,2)
+  continents[21:30,2] = c(2,1,6,6,6,6,6,6,6,6)
+  continents[31:40,2] = c(6,6,6,6,2,4,4,1,2,1)
+  continents[41:50,2] = c(4,6,1,4,6,1,3,1,6,6)
+  continents[51:60,2] = c(3,2,4,2,6,1,6,1,3,2)
+  continents[61:70,2] = c(1,2,2,2,3,6,3,3,6,6)
+  continents[71:80,2] = c(1,1,2,6,3,4,3,4,6,1)
+  continents[81:90,2] = c(3,3,3,2,2,6,6,6,6,4)
+  continents[91:100,2] = c(2,5,2,2,3,1,1,1,1,1)
+  continents[101:110,2] = c(1,2,1,1,1,3,2,5,1,6)
+  continents[111:120,2] = c(1,6,1,1,2,6,1,1,6,2)
+  continents[121:130,2] = c(6,6,6,1,1,3,4,3,4,2)
+  continents[131:140,2] = c(6,6,2,2,1,1,1,4,1,1)
+  continents[141:150,2] = c(1,2,2,1,1,1,4,6,6,2)
+  continents[151:160,2] = c(4,1,1,1,1,2,4,6,2,2)
+  continents[161:170,2] = c(1,2,2,1,6,2,1,1,6,1)
+  continents[171:180,2] = c(1,1,1,2,6,2,2,6,1,1)
+  continents[181:190,2] = c(2,6,2,1,6,6,3,3,3,3)
+  continents[191:200,2] = c(2,2,2,2,3,2,3,2,3,1)
+  continents[201:210,2] = c(3,2,2,2,2,2,2,1,6,2)
+  continents[211:220,2] = c(1,3,1,6,2,4,3,6,3,4)
+  continents[221:230,2] = c(1,1,1,3,2,3,3,6,1,6)
+  continents[231:232,2] = c(2,1)
+
+
+  # Get the first element of the location
+  firstElement = strsplit(loc,&quot;[^[:alnum:]]&quot;)[[1]][1]
+  #firstElement = strsplit(loc,&quot;,&quot;)[[1]][1]
+  if(is.na(firstElement)){firstElement=&quot;zzzzzzzzz&quot;}
+
+  # See if it is a city
+  tmp = grep(firstElement,world.cities[,1],fixed=TRUE)
+  tmp2 = grep(firstElement,state.name,fixed=TRUE)
+  tmp3 = grep(firstElement,world.cities[,2],fixed=TRUE)
+
+  if(length(tmp) == 1){
+    latlon = world.cities[tmp,c(5,4)]
+    cont = continents[which(world.cities[tmp,2]==continents[,1]),2]
+  }else if(length(tmp) &gt; 1){
+    tmpCities = world.cities[tmp,]
+    latlon = tmpCities[which.max(tmpCities$pop),c(5,4)]
+    cont = continents[which(tmpCities[which.max(tmpCities$pop),2]==continents[,1]),2]
+  }else if(length(tmp2) == 1){
+    latlon = c(state.center$x[tmp2],state.center$y[tmp2])
+    cont = 3
+  }else if(length(tmp3) &gt; 0){
+    tmpCities = world.cities[tmp3,]
+    latlon = tmpCities[which.max(tmpCities$pop),c(5,4)]
+    cont = continents[which(tmpCities[which.max(tmpCities$pop),2]==continents[,1]),2]
+  }
+  
+  return(list(latlon=latlon,cont=as.numeric(cont)))
+
+}
+
+
+getGreatCircle = function(userLL,relationLL){
+  tmpCircle = greatCircle(userLL,relationLL)
+  start = which.min(abs(tmpCircle[,1] - userLL[1,1]))
+  end = which.min(abs(tmpCircle[,1] - relationLL[1]))
+  greatC = tmpCircle[start:end,]
+  return(greatC)
+}
+
+trim &lt;- function (x) gsub(&quot;^\\s+|\\s+$&quot;, &quot;&quot;, x)</code></pre>
+</div>
+</div>

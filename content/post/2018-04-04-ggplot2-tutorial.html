@@ -65,14 +65,14 @@ install_github(&quot;hadley/ggplot2&quot;)</code></pre>
 <pre class="r"><code>data(diamonds)
 head(diamonds)</code></pre>
 <pre><code>## # A tibble: 6 x 10
-##   carat       cut color clarity depth table price     x     y     z
-##   &lt;dbl&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-## 1  0.23     Ideal     E     SI2  61.5    55   326  3.95  3.98  2.43
-## 2  0.21   Premium     E     SI1  59.8    61   326  3.89  3.84  2.31
-## 3  0.23      Good     E     VS1  56.9    65   327  4.05  4.07  2.31
-## 4  0.29   Premium     I     VS2  62.4    58   334  4.20  4.23  2.63
-## 5  0.31      Good     J     SI2  63.3    58   335  4.34  4.35  2.75
-## 6  0.24 Very Good     J    VVS2  62.8    57   336  3.94  3.96  2.48</code></pre>
+##   carat cut       color clarity depth table price     x     y     z
+##   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 0.230 Ideal     E     SI2      61.5   55.   326  3.95  3.98  2.43
+## 2 0.210 Premium   E     SI1      59.8   61.   326  3.89  3.84  2.31
+## 3 0.230 Good      E     VS1      56.9   65.   327  4.05  4.07  2.31
+## 4 0.290 Premium   I     VS2      62.4   58.   334  4.20  4.23  2.63
+## 5 0.310 Good      J     SI2      63.3   58.   335  4.34  4.35  2.75
+## 6 0.240 Very Good J     VVS2     62.8   57.   336  3.94  3.96  2.48</code></pre>
 <div id="graficos-unidimensionais-boxplots-e-histogramas" class="section level2">
 <h2>Gráficos unidimensionais (boxplots e histogramas)</h2>
 <p>Um bom modo de iniciar qualquer análise é fazendo uma análise exploratória dos dados. Para isso, alguns tipos específicos de gráficos como <em>boxplots</em> ou histogramas são maneiras simples de visualizar a estrutura básica dos dados. Estes tipos de gráfico são ditos unidimensionais, pois representam apenas uma variável. Neste tópico, veremos como criar esses dois gráficos de maneira simples (complementos serão adicionados mais para frente no tutorial).</p>
@@ -205,38 +205,38 @@ g3</code></pre>
 <table>
 <thead>
 <tr class="header">
-<th>Tipo de gráfico</th>
-<th>Função</th>
+<th align="left">Tipo de gráfico</th>
+<th align="left">Função</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Histograma</td>
-<td><strong>geom_histogram</strong></td>
+<td align="left">Histograma</td>
+<td align="left"><strong>geom_histogram</strong></td>
 </tr>
 <tr class="even">
-<td>Densidade</td>
-<td><strong>geom_density</strong></td>
+<td align="left">Densidade</td>
+<td align="left"><strong>geom_density</strong></td>
 </tr>
 <tr class="odd">
-<td>Boxplot</td>
-<td><strong>geom_boxplot</strong></td>
+<td align="left">Boxplot</td>
+<td align="left"><strong>geom_boxplot</strong></td>
 </tr>
 <tr class="even">
-<td>Barras</td>
-<td><strong>geom_bar</strong></td>
+<td align="left">Barras</td>
+<td align="left"><strong>geom_bar</strong></td>
 </tr>
 <tr class="odd">
-<td>Polígonos</td>
-<td><strong>geom_polygon</strong></td>
+<td align="left">Polígonos</td>
+<td align="left"><strong>geom_polygon</strong></td>
 </tr>
 <tr class="even">
-<td>Abline</td>
-<td><strong>geom_abline</strong></td>
+<td align="left">Abline</td>
+<td align="left"><strong>geom_abline</strong></td>
 </tr>
 <tr class="odd">
-<td>Texto</td>
-<td><strong>geom_text</strong></td>
+<td align="left">Texto</td>
+<td align="left"><strong>geom_text</strong></td>
 </tr>
 </tbody>
 </table>
