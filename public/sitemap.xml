@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/disciplina-de-macroevolu%C3%A7%C3%A3o-no-ibusp/</loc>
+    <lastmod>2018-06-21T08:30:19+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/brincando-com-dados-do-twitter-no-r/</loc>
     <lastmod>2018-04-26T14:05:19+00:00</lastmod>
   </url>
@@ -28,6 +33,24 @@
   </url>
   
   <url>
+    <loc>/tags/disciplina/</loc>
+    <lastmod>2018-06-21T08:30:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ensino/</loc>
+    <lastmod>2018-06-21T08:30:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/ensino/</loc>
+    <lastmod>2018-06-21T08:30:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/ggplot2/</loc>
     <lastmod>2015-07-28T14:05:19+00:00</lastmod>
     <priority>0</priority>
@@ -40,20 +63,32 @@
   </url>
   
   <url>
+    <loc>/tags/ibusp/</loc>
+    <lastmod>2018-06-21T08:30:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/macroevolu%C3%A7%C3%A3o/</loc>
+    <lastmod>2018-06-21T08:30:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/portuguese/</loc>
-    <lastmod>2018-04-26T14:05:19+00:00</lastmod>
+    <lastmod>2018-06-21T08:30:19+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-04-26T14:05:19+00:00</lastmod>
+    <lastmod>2018-06-21T08:30:19+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2018-04-26T14:05:19+00:00</lastmod>
+    <lastmod>2018-06-21T08:30:19+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -83,13 +118,13 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2015-07-28T14:05:19+00:00</lastmod>
+    <lastmod>2018-06-21T08:30:19+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-04-26T14:05:19+00:00</lastmod>
+    <lastmod>2018-06-21T08:30:19+00:00</lastmod>
     <priority>0</priority>
   </url>
   

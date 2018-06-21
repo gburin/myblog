@@ -6,10 +6,21 @@
     <description>Recent content in R on Textos, ideias e tutoriais de uma mente bagunçada.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 26 Apr 2018 14:05:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 Jun 2018 08:30:19 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Disciplina de Macroevolução no IBUSP</title>
+      <link>/disciplina-de-macroevolu%C3%A7%C3%A3o-no-ibusp/</link>
+      <pubDate>Thu, 21 Jun 2018 08:30:19 +0000</pubDate>
+      
+      <guid>/disciplina-de-macroevolu%C3%A7%C3%A3o-no-ibusp/</guid>
+      <description>Opa!
+No próximo semestre, mais especificamente no final de Setembro e início de Outubro, ofereceremos (Laura Alencar, Tiago Quental e eu) uma disciplina condensada sobre Macroevolução! O cartaz está abaixo, e contém as principais informações sobre a disciplina, porém para as informações completas (horários, conteúdo, etc.) acesse o sistema Janus para econtrar a ementa e turma.
+Infelizmente nossa capacidade de aceitar alunos é limitada, portanto quem tiver interesse em cursar a disciplina precisa mandar uma carta de intenção até o dia 15/Julho para o e-mail que está no cartaz.</description>
+    </item>
     
     <item>
       <title>Brincando com dados do Twitter no R</title>
