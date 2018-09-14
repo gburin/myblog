@@ -22,12 +22,16 @@
 <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 
 
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-118334548-2', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118334548-2', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 </head>
 
@@ -49,6 +53,10 @@ ga('send', 'pageview');
         
         <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
           <a href="/categories/ensino">ensino</a>
+        </li>
+        
+        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+          <a href="/categories/r">r</a>
         </li>
         
         <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
@@ -397,6 +405,7 @@ $ ssh usuario@servidor-linux
   <div class="entry-categories"><p><span>Categories</span>
     
     <a href="/categories/ensino" title="View all posts in ensino">ensino</a>
+    <a href="/categories/r" title="View all posts in r">r</a>
     <a href="/categories/script" title="View all posts in script">script</a>
     <a href="/categories/tutorial" title="View all posts in tutorial">tutorial</a>
   </p>
@@ -442,7 +451,7 @@ $ ssh usuario@servidor-linux
 
 <section id="comments" class="comments">
   <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
