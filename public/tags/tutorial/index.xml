@@ -6,18 +6,28 @@
     <description>Recent content in Tutorial on Textos, ideias e tutoriais de uma mente bagunçada.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 13 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Visualização de dados filogenéticos e fósseis no R - BIE5751</title>
+      <link>/visualiza%C3%A7%C3%A3o-de-dados-filogen%C3%A9ticos-e-f%C3%B3sseis-no-r---bie5751/</link>
+      <pubDate>Wed, 19 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/visualiza%C3%A7%C3%A3o-de-dados-filogen%C3%A9ticos-e-f%C3%B3sseis-no-r---bie5751/</guid>
+      <description>Nesse tutorial, vamos relembrar os principais pontos da primeira aula, porém agora observando o que acontece “por trás dos panos” da ferramenta.
+O tutorial não contém nenhum muitos comentários sobre os códigos utilizados, pois a intenção aqui não é ser um tutorial de R, mas sim sobre macroevolução. Sendo assim, o tutorial foi escrito de maneira a simplesmente ser necessário copiar e colar os códigos e rodá-los no seu próprio computador.</description>
+    </item>
+    
+    <item>
       <title>Visualização de dados filogenéticos e fósseis - BIE5751</title>
       <link>/visualiza%C3%A7%C3%A3o-de-dados-filogen%C3%A9ticos-e-f%C3%B3sseis---bie5751/</link>
-      <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/visualiza%C3%A7%C3%A3o-de-dados-filogen%C3%A9ticos-e-f%C3%B3sseis---bie5751/</guid>
-      <description>A ideia por trás desse tutorial é ter um primeiro contato com os tipos principais de dados usados em Macroevolução. Os exercícios propostos aqui serão retomados com maior detalhe no próximo tutorial, que será feito diretamente no R, então no momento não se preocupe em saber como as coisas são feitas, e busque só se familiarizar com os diferentes tipos de dados.
+      <description>A ideia por trás desse tutorial é ter um primeiro contato com os principais tipos de dados usados em Macroevolução. Os exercícios propostos aqui serão retomados com maior detalhe no próximo tutorial, que será feito diretamente no R, então no momento não se preocupe em saber como as coisas são feitas, e busque só se familiarizar com os diferentes tipos de dados.
 Usaremos uma ferramenta interativa que permite a visualização instantânea e simplificada de comandos do R, usando o pacote shiny.</description>
     </item>
     
