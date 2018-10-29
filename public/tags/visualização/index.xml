@@ -39,7 +39,7 @@ Usaremos uma ferramenta interativa que permite a visualização instantânea e s
       <guid>/brincando-com-dados-do-twitter-no-r/</guid>
       <description>Mah ôe!
 No post de hoje, coloquei alguns comandos interessantes que usam o pacote twitteR para analisar twitts AH JURA .
- Para poder acessar as informações do twitter através de sua API, é necessário que o(a) usuário(a) crie um aplicativo(pelo nome parece algo complicado, mas é bem simples) para que se possa obter quatro dados para autenticação: Consumer Key, Consumer Secret, Access Token e Access Secret. Para obter todos esses dados, acesse esse site, crie um aplicativo novo e siga os passos da própria página.</description>
+Para poder acessar as informações do twitter através de sua API, é necessário que o(a) usuário(a) crie um aplicativo(pelo nome parece algo complicado, mas é bem simples) para que se possa obter quatro dados para autenticação: Consumer Key, Consumer Secret, Access Token e Access Secret. Para obter todos esses dados, acesse esse site, crie um aplicativo novo e siga os passos da própria página.</description>
     </item>
     
     <item>

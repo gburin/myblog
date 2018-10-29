@@ -15,7 +15,7 @@ No post de hoje, coloquei alguns comandos interessantes que usam o pacote *twitt
 
 ![](https://media1.tenor.com/images/a008ae2b31ae18b6aba48720c3d91c54/tenor.gif?itemid=4276324)
 
-Para poder acessar as informações do twitter através de sua [API](en.wikipedia.org/wiki/Application_programming_interface), é necessário que o(a) usuário(a) crie um aplicativo(pelo nome parece algo complicado, mas é bem simples) para que se possa obter quatro dados para autenticação: *Consumer Key*, *Consumer Secret*, *Access Token* e *Access Secret*. Para obter todos esses dados, acesse [esse site](https://apps.twitter.com), crie um aplicativo novo e siga os passos da própria página.
+Para poder acessar as informações do twitter através de sua [API](https://en.wikipedia.org/wiki/Application_programming_interface), é necessário que o(a) usuário(a) crie um aplicativo(pelo nome parece algo complicado, mas é bem simples) para que se possa obter quatro dados para autenticação: *Consumer Key*, *Consumer Secret*, *Access Token* e *Access Secret*. Para obter todos esses dados, acesse [esse site](https://apps.twitter.com), crie um aplicativo novo e siga os passos da própria página.
 
 O primeiro passo ~~obviamente~~ é carregar os pacotes necessários.
 

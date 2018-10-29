@@ -2,11 +2,42 @@
 <html lang="pt-br">
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "/"
+        },
+        "articleSection" : "post",
+        "name" : "Brincando com dados do Twitter no R",
+        "headline" : "Brincando com dados do Twitter no R",
+        "description" : "Mah ôe!
+No post de hoje, coloquei alguns comandos interessantes que usam o pacote twitteR para analisar twitts AH JURA .
+Para poder acessar as informações do twitter através de sua API, é necessário que o(a) usuário(a) crie um aplicativo(pelo nome parece algo complicado, mas é bem simples) para que se possa obter quatro dados para autenticação: Consumer Key, Consumer Secret, Access Token e Access Secret. Para obter todos esses dados, acesse esse site, crie um aplicativo novo e siga os passos da própria página.",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2018",
+        "datePublished": "2018-04-26 14:05:19 &#43;0000 UTC",
+        "dateModified" : "2018-04-26 14:05:19 &#43;0000 UTC",
+        "url" : "/brincando-com-dados-do-twitter-no-r/",
+        "wordCount" : "1630",
+        "image" : /img/covers/analise_twitter.png",
+        "keywords" : [ "portuguese","script","twitteR","visualização","R","Blog" ]   
+    }
+    </script>
+
+
  <title>Brincando com dados do Twitter no R </title>
 
 
+<meta name="description" content="Um blog para registrar ideias, reflexões e tutoriais." />
 
-<meta name="description" content="Um blog para registrar ideias, reflexões e tutoriais.">
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +68,7 @@ if (!doNotTrack) {
 
 
 <body class="post-template-default single single-post single-format-standard ct-body singular singular-post not-front standard">
-  
+
   <div id="overflow-container" class="overflow-container">
     <a class="skip-content" href="#main">Skip to content</a>
     <header id="site-header" class="site-header" role="banner">
@@ -123,6 +154,12 @@ if (!doNotTrack) {
     </li>
     
 
+
+    
+
+    
+
+
   </ul></div>
 
       </div>
@@ -144,21 +181,9 @@ if (!doNotTrack) {
 
     <div class="menu">
       <ul id="menu-primary-items" class="menu-primary-items">
-        <li id="menu-item" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item">
-          <a href="/">Home</a>
-        </li>
-
-        
-        
-        <li id="menu-item" class="menu-item menu-item-type-post_type menu-item-object-page menu-item">
-          <a href="/about/">Sobre</a>
-        </li>
         
         
       </ul>
-
-
-
     </div>
 
   </div>
@@ -169,20 +194,23 @@ if (!doNotTrack) {
     <div id="main" class="main" role="main">
 
       
+  
+  
+    map[]
+  
+  
   <div id="loop-container" class="loop-container">
     
     <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
 
-      <div class='featured-image lazy lazy-bg-image' data-background="/img/covers/analise_twitter.png">
+      <div class='featured-image lazy lazy-bg-image'  data-background="/img/covers/analise_twitter.png">
       </div>
       
         <div class="entry-meta">
-          <span class="date">April 26</span>	<span> / </span>
+          <span class="date">26 April</span>	<span> / </span>
 
           <span class="author">
-            
-            
-            
+            <a href="/" title="Posts by " rel="author"></a>
           </span>
 
 
@@ -204,11 +232,8 @@ if (!doNotTrack) {
             <article>
               <p><strong>Mah ôe!</strong></p>
 <p>No post de hoje, coloquei alguns comandos interessantes que usam o pacote <em>twitteR</em> para analisar twitts <del>AH JURA</del> .</p>
-<div class="figure">
-<img src="https://media1.tenor.com/images/a008ae2b31ae18b6aba48720c3d91c54/tenor.gif?itemid=4276324" />
-
-</div>
-<p>Para poder acessar as informações do twitter através de sua <a href="en.wikipedia.org/wiki/Application_programming_interface">API</a>, é necessário que o(a) usuário(a) crie um aplicativo(pelo nome parece algo complicado, mas é bem simples) para que se possa obter quatro dados para autenticação: <em>Consumer Key</em>, <em>Consumer Secret</em>, <em>Access Token</em> e <em>Access Secret</em>. Para obter todos esses dados, acesse <a href="https://apps.twitter.com">esse site</a>, crie um aplicativo novo e siga os passos da própria página.</p>
+<p><img src="https://media1.tenor.com/images/a008ae2b31ae18b6aba48720c3d91c54/tenor.gif?itemid=4276324" /></p>
+<p>Para poder acessar as informações do twitter através de sua <a href="https://en.wikipedia.org/wiki/Application_programming_interface">API</a>, é necessário que o(a) usuário(a) crie um aplicativo(pelo nome parece algo complicado, mas é bem simples) para que se possa obter quatro dados para autenticação: <em>Consumer Key</em>, <em>Consumer Secret</em>, <em>Access Token</em> e <em>Access Secret</em>. Para obter todos esses dados, acesse <a href="https://apps.twitter.com">esse site</a>, crie um aplicativo novo e siga os passos da própria página.</p>
 <p>O primeiro passo <del>obviamente</del> é carregar os pacotes necessários.</p>
 <pre class="r"><code>library(&quot;twitteR&quot;)
 library(&quot;wordcloud&quot;)</code></pre>
@@ -220,33 +245,33 @@ library(&quot;wordcloud&quot;)</code></pre>
 <pre class="r"><code>tweets &lt;- searchTwitter(&quot;@gustavoburin&quot;, n = 200)</code></pre>
 <pre><code>## Warning in doRppAPICall(&quot;search/tweets&quot;, n, params = params,
 ## retryOnRateLimit = retryOnRateLimit, : 200 tweets were requested but the
-## API can only return 47</code></pre>
+## API can only return 33</code></pre>
 <pre class="r"><code>head(tweets)</code></pre>
 <pre><code>## [[1]]
-## [1] &quot;taisalesw: @gustavoburin @vitornasc Kkkkkk&quot;
+## [1] &quot;rpgraciotti: @lartist @alencarlrv @gustavoburin&quot;
 ## 
 ## [[2]]
-## [1] &quot;LaVachis: RT @gustavoburin: Aquele momento em que você tenta plotar um mapa de distribuições e se torna o Romero Brito https://t.co/3R38fU3oW7&quot;
+## [1] &quot;nmluchetti: @veumb @rntannus @gustavoburin Não consegui ler o texto ainda, mas só pelo mapa na África eu já veria o problema, j… https://t.co/njE9LqTzbX&quot;
 ## 
 ## [[3]]
-## [1] &quot;Pi_gozzo: @gustavoburin @A_la_Baianesca, objetivo da sua vida profissional: Fazer um gráfico assim.&quot;
+## [1] &quot;veumb: @rntannus @gustavoburin No Brasil, por exemplo, sabe-se pouco sobre helmintos em geral. Sabemos muito sobre parasit… https://t.co/Dh4FrgQmaB&quot;
 ## 
 ## [[4]]
-## [1] &quot;Pi_gozzo: @gustavoburin Eu adorei esse cubismo brasileiro.&quot;
+## [1] &quot;veumb: @rntannus @gustavoburin Não li o paper. Mas se eles se basearam em dados de coleções, com certeza. Os dados de cole… https://t.co/gN7TCsmYzq&quot;
 ## 
 ## [[5]]
-## [1] &quot;vitornasc: RT @gustavoburin: Aquele momento em que você tenta plotar um mapa de distribuições e se torna o Romero Brito https://t.co/3R38fU3oW7&quot;
+## [1] &quot;rntannus: @veumb @gustavoburin oh manjo nada de bicho, menos ainda de parasita, mas isto aí não tem correlação com esforço amostral ?&quot;
 ## 
 ## [[6]]
-## [1] &quot;leseixas_: @gustavoburin @diogro Eu recomendo usar as paletas de cores do https://t.co/97nn7MGzwI. Os gráficos ficam mais prof… https://t.co/gWVu0T78Dg&quot;</code></pre>
+## [1] &quot;veumb: @gustavoburin Eu vi mas não li! Valeu! Eu conheço essa galera. Já publiquei com eles.&quot;</code></pre>
 <p>Ainda não descobri o porquê, mas a API do twitter está limitando as minhas buscas em valores bastante aleatórios. Um dos motivos pode ser que meu aplicativo é novo, mas isso só vou descobrir daqui a um tempo. Atualizo aqui assim que souber!</p>
 <p>Além disso, também é possível fazer olhar para os dados do perfil de algum usuário:</p>
 <pre class="r"><code>myuser &lt;- getUser(&quot;gustavoburin&quot;)</code></pre>
 <p>Essa função além de obter dados básicos como último status, id, etc., também inclui no objeto diferentes <em>methods</em> que permitem extrair informações mais específicas (notem que por serem funções, esses dados são obtidos usando ‘()’ no fim):</p>
 <pre class="r"><code>myuser$getDescription()</code></pre>
-<pre><code>## [1] &quot;Evolutionary ecologist wannabe, Open-source/science enthusiast, addicted to learning and tweaking everything.&quot;</code></pre>
+<pre><code>## [1] &quot;Proto-Evolutionary ecologist, Open-source/science enthusiast, addicted to learning and tweaking everything.\nPostdoc @ LabMeMe/USP&quot;</code></pre>
 <pre class="r"><code>myuser$getFollowersCount()</code></pre>
-<pre><code>## [1] 414</code></pre>
+<pre><code>## [1] 476</code></pre>
 <p>Outro modo de olhar para o twitter é através da linha do tempo de algum usuário em específico (novamente não sei porque o objeto contém menos informação do que peço na função):</p>
 <pre class="r"><code>usertl &lt;- userTimeline(&quot;gustavoburin&quot;, n = 200)</code></pre>
 <p>Uma forma de facilitar a visualização dessas informações é usando nuvens de palavras. Para isso, usaremos o pacote <em>wordcloud</em>. Mas antes de gerar a nuvem, precisamos organizar os dados coletados acima.</p>
@@ -274,10 +299,7 @@ wordcloud(names(tweeter.freq), tweeter.freq, colors = c(&quot;tomato&quot;,
 <pre class="r"><code>source(&quot;http://biostat.jhsph.edu/~jleek/code/twitterMap.R&quot;)
 
 twitterMap(&quot;gustavoburin&quot;, fileName = &quot;analise_twitter.pdf&quot;, plotType = &quot;both&quot;, userLocation = &quot;Sao Paulo&quot;)</code></pre>
-<div class="figure">
-<img src="../img/analise_twitter.png" width="700" />
-
-</div>
+<p><img src="../img/analise_twitter.png" width="700" /></p>
 <p>Para rodar a função acima, precisei fazer umas pequenas modificações no código, pois o reconhecimento dos dados de latitude/longitude estavam dando erro (talvez por eu não incluir a localização nos meus twitts), além de a função principal somente exportar a imagem sem plotá-la. Colocarei no fim do post as funções modificadas que usei.</p>
 <div id="ta-mas-e-dai" class="section level1">
 <h1>Tá, mas e daí?</h1>
@@ -584,10 +606,7 @@ trim &lt;- function (x) gsub(&quot;^\\s+|\\s+$&quot;, &quot;&quot;, x)</code></p
 
   <div class="entry-categories"><p><span>Categories</span>
     
-    <a href="/categories/ensino" title="View all posts in ensino">ensino</a>
-    <a href="/categories/r" title="View all posts in r">r</a>
     <a href="/categories/script" title="View all posts in script">script</a>
-    <a href="/categories/tutorial" title="View all posts in tutorial">tutorial</a>
   </p>
 </div>
 
@@ -595,37 +614,20 @@ trim &lt;- function (x) gsub(&quot;^\\s+|\\s+$&quot;, &quot;&quot;, x)</code></p
 
 <div class="entry-tags"><p><span>Tags</span>
   
-  <a href="/tags/disciplina" title="View all posts tagged disciplina">disciplina</a>
-  
-  <a href="/tags/ensino" title="View all posts tagged ensino">ensino</a>
-  
-  <a href="/tags/ggplot2" title="View all posts tagged ggplot2">ggplot2</a>
-  
-  <a href="/tags/gr%C3%A1ficos" title="View all posts tagged gráficos">gráficos</a>
-  
-  <a href="/tags/ibusp" title="View all posts tagged ibusp">ibusp</a>
-  
-  <a href="/tags/macroevolu%C3%A7%C3%A3o" title="View all posts tagged macroevolução">macroevolução</a>
-  
   <a href="/tags/portuguese" title="View all posts tagged portuguese">portuguese</a>
-  
-  <a href="/tags/r" title="View all posts tagged r">r</a>
   
   <a href="/tags/script" title="View all posts tagged script">script</a>
   
-  <a href="/tags/servidor" title="View all posts tagged servidor">servidor</a>
-  
-  <a href="/tags/ssh" title="View all posts tagged ssh">ssh</a>
-  
-  <a href="/tags/tutorial" title="View all posts tagged tutorial">tutorial</a>
-  
-  <a href="/tags/twitter" title="View all posts tagged twitter">twitter</a>
+  <a href="/tags/twitter" title="View all posts tagged twitteR">twitteR</a>
   
   <a href="/tags/visualiza%C3%A7%C3%A3o" title="View all posts tagged visualização">visualização</a>
+  
+  <a href="/tags/r" title="View all posts tagged R">R</a>
   
 
 </p></div>	</div>
 
+	
 </div>
 </div>
 
@@ -732,6 +734,12 @@ trim &lt;- function (x) gsub(&quot;^\\s+|\\s+$&quot;, &quot;&quot;, x)</code></p
         </a>
         </li>
         
+
+
+        
+
+        
+
 				</ul>	<div class="design-credit">
 		
 		<p>
