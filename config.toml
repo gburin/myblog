@@ -2,7 +2,7 @@ baseurl = "/"
 languageCode = "pt-br"
 title = "Textos, ideias e tutoriais de uma mente bagunçada."
 theme = "hugo-nederburg-theme"
-googleAnalytics = "UA-118334548-2"
+googleAnalytics = "UA-118334548-3"
 disqusShortname = "gburin"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
