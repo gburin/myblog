@@ -8,6 +8,7 @@ comments:   true
 showonlyimage: false
 image:      "img/covers/saude_mental_crop.png"
 ---
+
 <font size="4.5">
 **E aí, pessoal!**
 
@@ -25,12 +26,12 @@ Por fim, coloco-me à disposição para conversar sobre os temas que abordei (e 
 
 Espero vocês lá!
 
-## Artigos
+### Artigos
    
 * <a href="https://www.sciencedirect.com/science/article/pii/S0048733317300422" target="_blank">Levecque *et al.*, 2017</a>
 * <a href="https://www.nature.com/articles/nbt.4089" target="_blank">Evans *et al.*, 2018</a>
 
-## Reportagens, textos e entrevistas
+### Reportagens, textos e entrevistas
 
 * <a href="https://www.nature.com/articles/d41586-018-05080-6" target="_blank">Depoimento (brutal) de Dave Reay sobre sua depressão durante o doutorado</a>
 * <a href="https://www.nature.com/articles/d41586-018-04998-1" target="_blank">Histórias curtas de como 5 pesquisadores lidaram com seus problemas na academia</a>
