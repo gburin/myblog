@@ -1,6 +1,6 @@
 ---
 title:      "II Dia da Saúde Mental na Pós-Graduação"
-date:       2018-12-13 08:30:19
+date:       2018-12-05 08:30:19
 summary:    Slides e links da minha apresentação
 categories: ["apresentações"]
 tags:       ["portuguese", "apresentações", "saúde mental", "ecologia", "IBUSP", "pós-graduação"]
