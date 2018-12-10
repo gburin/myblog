@@ -30,6 +30,8 @@ Espero vocês lá!
    
 * <a href="https://www.sciencedirect.com/science/article/pii/S0048733317300422" target="_blank">Levecque *et al.*, 2017</a>
 * <a href="https://www.nature.com/articles/nbt.4089" target="_blank">Evans *et al.*, 2018</a>
+* <a href="https://www.tandfonline.com/doi/abs/10.1080/19325037.2013.764248" target="_blank">Wyatt & Oswalt, 2013</a>
+
 
 ### Reportagens, textos e entrevistas
 
@@ -47,5 +49,24 @@ Espero vocês lá!
 * <a href="https://www.theguardian.com/higher-education-network/2014/mar/06/mental-health-academics-growing-problem-pressure-university" target="_blank">Reportagem do The Guardian (UK) sobre o aumento dos índices de doenças mentais na academia</a>
 * <a href="https://www.sciencemag.org/careers/2017/04/phd-students-face-significant-mental-health-challenges" target="_blank">Reportagem na Science com alguns dados sobre saúde mental na pós-graduação</a>
 * <a href="https://www.newsweek.com/michelle-obama-tells-secret-i-have-been-every-powerful-table-you-can-think-1242695" target="_blank">Reportagem da Newsweek sobre como Michelle Obama lida com a síndrome do impostor</a>
+* <a href="https://www.sciencemag.org/careers/2014/02/paying-graduate-schools-mental-toll" target="_blank">Reportagem da Science sobre os custos de problemas de saúde mental na pós-graduação</a>
+* <a href="https://blogs.mcgill.ca/gradlife/2013/05/23/the-conversations-we-dont-have-but-should/" target="_blank">Post no blog da McGill University (Canadá) sobre quebrar o silêncio sobre problemas</a>
+* <a href="https://dynamicecology.wordpress.com/2016/07/13/life-as-an-anxious-scientist/" target="_blank">Texto da Dra. Meghan Duffy sobre a vida como uma cientista com ansiedade</a>
+* <a href="https://smallpondscience.com/2017/02/01/lets-talk-about-mental-health-in-academia/" target="_blank">Post no site Small Pond Science com uma discussão sobre saúde mental na academia</a>
+* <a href="https://www.theguardian.com/higher-education-network/2017/mar/03/mental-health-academia-off-sick" target="_blank">Reportagem do The Guardian sobre a necessidade de se falar abertamente sobre saúde mental na academia</a>
+* <a href="https://www.theguardian.com/higher-education-network/blog/2014/may/08/work-pressure-fuels-academic-mental-illness-guardian-study-health" target="_blank">Reportagem do The Guardian com pesquisa sobre efeitos da carga horária extensiva na saúde mental na academia</a>
+* <a href="https://www.theguardian.com/higher-education-network/2015/feb/20/i-can-never-get-university-hr-teams-to-take-mental-health-seriously" target="_blank">Reportagem do The Guardian sobre as falhas dos setores administrativos das universidades em lidar com problemas de saúde mental</a>
+* <a href="https://www.theguardian.com/education/2015/feb/13/university-staff-scared-to-disclose-mental-health-problems" target="_blank">Reportagem do The Guardian sobre o medo de represálias ao falar sobre saúde mental</a>
+* <a href="https://vejasp.abril.com.br/blog/terapia/perdi-sentido-vida-graduacao-depressao/" target="_blank">Reportagem da Veja com entrevista com pesquisadora do IQ-USP que quase abandonou a pós-graduação</a>
+* <a href="https://www.sciencemag.org/careers/2018/03/graduate-students-need-more-mental-health-support-new-study-highlights" target="_blank">Reportagem da Science sobre o estudo de Evans *et al.*, 2018</a>
+* <a href="https://marcoarmello.wordpress.com/2018/03/08/prazospg/" target="_blank">Texto do prof. Marco Mello sobre como lidar com as frustrações com prazos</a>
+* <a href="https://www.chronicle.com/article/Why-I-Collapsed-on-the-Job/242537" target="_blank">Reportagem sobre fadiga e esgotamento físicos</a>
+* <a href="https://drewtyre.rbind.io/post/mental-health/" target="_blank">Texto sobre importância da saúde mental escrito por Drew Tyre, diabético e diagnosticado com depressão</a>
+* <a href="https://medium.com/@dorsaamir/modest-advice-for-new-graduate-students-b0be6b8dbc22" target="_blank">Alguns conselhos para novos(as) pós-graduandos(as)</a>
+* <a href="https://www.timeshighereducation.com/blog/think-impostor-and-youll-go-far-academia" target="_blank">Reportagem da Times Higher Education (que faz alguns rankings de universidades) sobre síndrome do impostor</a>
+* <a href="https://www.nature.com/articles/d41586-018-05076-2" target="_blank">Reportagem da Nature sobre integridade e punição em casos de assédio</a>
+* <a href="https://www.nature.com/articles/d41586-018-07358-1" target="_blank">Entrevista na Nature com Dr. James Turner sobre razões que o levaram a se tornar um "socorrista" de saúde mental em sua instituição</a>
+* <a href="https://jornal.usp.br/ciencias/ciencias-da-saude/estudo-investiga-sofrimento-mental-de-estudantes-universitarios/" target="_blank">Reportagem no Jornal da USP sobre estudo que vai avaliar sofrimento mental em estudantes universitários</a>
 
+  
 </font>
